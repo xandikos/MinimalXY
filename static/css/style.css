@@ -121,6 +121,10 @@ main > p:first-of-type::first-letter {
   font-family: serif;
 }
 
+main a {
+  color: #f44336;
+}
+
 main blockquote {
   border-left:6px solid;
   border-color: black;
