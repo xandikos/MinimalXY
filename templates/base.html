@@ -101,11 +101,11 @@
     </div>
     <div class="blogroll-block w3-col l3 m3 s6">
       <div>
-          <h6>Authors</h6>
+          <h6><a href="{{ SITEURL }}/authors.html">Authors</a></h6>
           <ul>
-              {% if authors|count > 1 %}
+              <!-- {% if authors|count > 1 %}
               <li class=""><a href="{{ SITEURL }}/authors.html">Alle</a></li>
-              {% endif %}
+              {% endif %} -->
               {% for author, articles in authors %}
               <li class=""><a href="{{ SITEURL }}/authors.html#{{ author.page_name[7:] }}">{{ author }}</a></li>
               {% endfor %} {% for number in range(4 - authors|count) %}
