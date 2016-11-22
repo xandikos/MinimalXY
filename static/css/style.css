@@ -141,6 +141,7 @@ main div.highlight {
   font-size: 11pt;
   background-color:#f1f1f1;
   overflow: scroll;
+  margin: 20px 0px;
 }
 
 main pre {
