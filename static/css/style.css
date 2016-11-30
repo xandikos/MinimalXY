@@ -289,7 +289,7 @@ div#contact ul li {
 
 #content-title-tag {
   color: #f44336;
-  font-size: 48pt;
+  font-size: 36pt;
 }
 
 #content-title-category {
@@ -397,6 +397,10 @@ div#contact ul li {
     font-family: serif;
     font-size: 40pt;
     line-height: 280px;
+  }
+
+  #content-title-tag {
+    font-size: 48pt;
   }
 
   #content-title-category-img {
