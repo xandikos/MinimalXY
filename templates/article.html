@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% block head %}
 {{ super() }}
-{% if article.description %}
-<meta name="description" content="{{article.description}}" />
-{% endif %}
 {% for tag in article.tags %}
-<meta name="tags" content="{{tag}}" />
+    <meta name="tags" content="{{tag}}" />
 {% endfor %}
+    <meta property="og:site_name" content="{{ SITENAME }}">
+    <meta property="og:title" content="{{ article.title }} - {{ SITENAME }}" />
+    <meta property="og:description" content="{{ article.summary }}" />
+    <meta property="og:image" itemprop="image" content="{{ SITEURL }}{{ article.headerimage }}">
+    <meta property="og:type" content="website" />
 {% endblock %}
 {% block content %}
 <br>
