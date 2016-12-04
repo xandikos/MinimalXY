@@ -156,6 +156,8 @@ main pre {
 
 main p > img {
   max-width: 100%;
+  display: block;
+  margin: 30px auto;
 }
 
 /* Above needed for full-width images in article content.
