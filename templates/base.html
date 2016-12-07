@@ -107,7 +107,8 @@
               <li class=""><a href="{{ SITEURL }}/authors.html">Alle</a></li>
               {% endif %} -->
               {% for author, articles in authors %}
-              <li class=""><a href="{{ SITEURL }}/authors.html#{{ author.page_name[7:] }}">{{ author }}</a></li>
+              <li class=""><a href="{{ SITEURL }}/authors.html">{{ author }}</a></li>
+              <!-- <li class=""><a href="{{ SITEURL }}/authors.html#{{ author.page_name[7:] }}">{{ author }}</a></li> -->
               {% endfor %} {% for number in range(4 - authors|count) %}
               <li class="empty"></li>
               {% endfor %}
