@@ -10,31 +10,8 @@ a {
       text-decoration: none;
 }
 
-
-::-moz-selection { /* Code for Firefox */
-    color: white;
-    background: #f6665c;
-}
-
-::selection {
-    color: white;
-    background: #f6665c;
-}
-
 a img:hover {
   opacity: 0.85;
-}
-
-
-ul.social li a:hover {
-  opacity: 0.7;
-}
-
-hr {
-  width: 70%;
-  margin: auto;
-  border-color: grey;
-  border-width: 1px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -63,6 +40,22 @@ h4 {
   font-size: 16pt;
 }
 
+hr {
+  width: 70%;
+  margin: auto;
+  border-color: grey;
+  border-width: 1px;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #f6665c;
+}
+
+::selection {
+    color: white;
+    background: #f6665c;
+}
 
 nav {
   font-size: 14pt;
@@ -102,6 +95,10 @@ ul.social li {
   display: inline-block;
   padding: 0 15px;
   font-size: 7vw;
+}
+
+ul.social li a:hover {
+  opacity: 0.7;
 }
 
 .col-main {
@@ -160,14 +157,6 @@ main p > img {
   margin: 30px auto 20px auto;
 }
 
-/* Above needed for full-width images in article content.
- Usage in Markdown:
-
-![Some cool image](http://imagehost/image.png)
-{.adjust-width}
-
-Place class in a new line! */
-
 main p.content-highlight {
   color: #f44336;
   font-size: 18pt;
@@ -177,14 +166,12 @@ main p.content-highlight {
   float: right;
 }
 
-.blogroll-block {
-  padding: 30px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.empty {
-  height: 22px;
+.caption {
+  text-align: center;
+  font-size: 10pt;
+  font-style: italic;
+  color: grey;
+  margin-bottom: 30px;
 }
 
 .videoWrapper {
@@ -201,12 +188,14 @@ main p.content-highlight {
 	height: 100%;
 }
 
-.caption {
-  text-align: center;
-  font-size: 10pt;
-  font-style: italic;
-  color: grey;
-  margin-bottom: 30px;
+.blogroll-block {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.empty {
+  height: 22px;
 }
 
 div#blogroll ul {
@@ -249,7 +238,6 @@ div#contact ul li {
 #copyright {
   background-color: #0F0F0F;
 }
-
 
 .post-info {
   display: flex;
@@ -330,15 +318,6 @@ div#contact ul li {
   flex-wrap: wrap;
 }
 
-/*p:first-child::first-letter {
-  font-weight: bold;
-  font-size: 18pt;
-}*/
-
-#article-tags {
-
-}
-
 #tagcloud {
   height: 400px;
 }
@@ -369,7 +348,6 @@ div#contact ul li {
 }
 
 
-
 /* For Screens larger than 530px, do not use responsive font-sizes */
 @media screen and (min-width: 530px) {
 
@@ -383,7 +361,6 @@ div#contact ul li {
   }
 
   ul.social li {
-    padding: 0 15px;
     font-size: 20pt;
   }
 
@@ -404,7 +381,6 @@ div#contact ul li {
   }
 
   #content-title-category {
-    font-family: serif;
     font-size: 40pt;
     line-height: 280px;
   }
