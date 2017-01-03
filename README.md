@@ -1,7 +1,7 @@
 minimalX. A beautiful and user-centered Pelican theme.
 ========================================================
 
-[It's time for something new.](https://art1fa.github.io/minimalx-pelican-theme.html) Here's minimalX, making your Pelican-enabled blog enjoyable again.
+[It's time for something new.](https://fabianbloggt.de/minimalx-pelican-theme.html) Here's minimalX, making your Pelican-enabled blog enjoyable again.
 
 ### Design focus
 - Minimal flat design
@@ -22,11 +22,13 @@ minimalX. A beautiful and user-centered Pelican theme.
 ### Screenshot
 ![Screenshot of minimalX](minimalX.png)
 
+Check out [fabianbloggt.de](http://fabianbloggt.de) for a live demonstration of this theme.
+
 ### How to use minimalX
 
-Check the wiki [COMING SOON].
+Check the [Wiki](https://github.com/art1fa/minimalX/wiki).
 
-I wrote an example article to show you how minimalX renders your articles. There are also some additional styling methods explained.
+I wrote an [example article](http://fabianbloggt.de/minimalx-article-format.html) to show you how minimalX renders your articles. There are also some additional styling methods explained.
 
 ### Contributions welcome!
 
