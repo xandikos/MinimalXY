@@ -1,7 +1,7 @@
 minimalX. A beautiful and user-centered Pelican theme.
 ========================================================
 
-[It's time for something new.](https://fabianbloggt.de/minimalx-pelican-theme.html) Here's minimalX, making your Pelican-enabled blog enjoyable again.
+[It's time for something new.](http://fabianbloggt.de/minimalx-pelican-theme.html) Here's minimalX, making your Pelican-enabled blog enjoyable again.
 
 ### Design focus
 - Minimal flat design
