@@ -57,7 +57,7 @@
                 </a>
                 <div style="margin-left: 20px; margin-top: 15px;">
                     <a href="{{ SITEURL }}/authors.html#{{ article.author.page_name[7:] }}"><span id="author-name" class="w3-hover-text-dark-grey">{{ article.author }}</span></a>
-                    <p id="author-story" style="max-width: 500px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p id="author-story" style="max-width: 500px;">{% if article.author==AUTHOR %}{{ AUTHOR_INFO_SHORT_FABIAN_KEITEL }}{% endif %}</p>
                 </div>
             </div>
         </div>
