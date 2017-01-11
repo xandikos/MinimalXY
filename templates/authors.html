@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} - Authors{% endblock %}
+{% block title %}{{ SITENAME }} - Autoren{% endblock %}
 
 {% block content %}
 <br>
 <br>
 <div class="w3-container col-main">
-  <h1>About me</h1>
+  <h1>Über mich</h1>
   <br>
   {%- for author, articles in authors|sort %}
   {% if author==AUTHOR %}
@@ -23,7 +23,7 @@
           <li style="font-size: 18pt;"><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
           {% endfor %}
         </ul>
-    <a class="w3-btn w3-red w3-right" style="margin-top: 12px;" href="{{ SITEURL }}/{{ author.url }}">All articles &#10093;</a>
+    <a class="w3-btn w3-red w3-right" style="margin-top: 12px;" href="{{ SITEURL }}/{{ author.url }}">Alle Artikel &#10093;</a>
   </div>
 </div>
 <br>
@@ -33,7 +33,7 @@
   {% endfor %}
 
   {% if authors|count > 1 %}
-  <h2>Other authors</h2>
+  <h2>Gastautoren</h2>
   <br>
     {%- for author, articles in authors|sort %}
     {% if author!=AUTHOR %}
@@ -50,7 +50,7 @@
             <li style="font-size: 18pt;"><a class="sc-{{ name }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
             {% endfor %}
           </ul>
-      <a class="w3-btn w3-red w3-right" style="margin-top: 12px;" href="{{ SITEURL }}/{{ author.url }}">All articles &#10093;</a>
+      <a class="w3-btn w3-red w3-right" style="margin-top: 12px;" href="{{ SITEURL }}/{{ author.url }}">Alle Artikel &#10093;</a>
     </div>
   </div>
   <br>
