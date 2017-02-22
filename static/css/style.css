@@ -94,7 +94,7 @@ ul.social {
 ul.social li {
   display: inline-block;
   padding: 0 15px;
-  font-size: 7vw;
+  font-size: 20pt;
 }
 
 ul.social li a:hover {
@@ -304,14 +304,15 @@ div#contact ul li {
 }
 
 #heyitsme {
-  font-family: 'Reenie Beanie';
-  font-size: 22vw;
-  white-space:nowrap;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 11pt;
 }
 
 
 #introduction {
   display: flex;
+  align-items: center;
   margin: 0 auto;
   max-width: 1000px;
   justify-content: center;
@@ -354,14 +355,6 @@ div#contact ul li {
   nav ul {
       flex-direction: row;
       margin-top: 24px;
-  }
-
-  #heyitsme {
-    font-size: 80pt;
-  }
-
-  ul.social li {
-    font-size: 20pt;
   }
 
   article {
