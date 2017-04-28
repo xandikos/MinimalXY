@@ -148,6 +148,12 @@
         </span>
     </div>
   </footer>
+{% if GOOGLE_ANALYTICS %}
+ {% include "ga.html" %}
+{% endif %}
+{% if PIWIK_URL and PIWIK_SITE_ID %}
+  {% include "piwik.html" %}
+{% endif %}
 <script src="{{ SITEURL }}/theme/js/shariff.min.js"></script>
 </body>
 </html>
