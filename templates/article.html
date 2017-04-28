@@ -8,7 +8,8 @@
     <meta property="og:title" content="{{ article.title }} - {{ SITENAME }}" />
     <meta property="og:description" content="{{ article.summary }}" />
     <meta property="og:image" itemprop="image" content="{{ SITEURL }}{{ article.headerimage }}">
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
 {% endblock %}
 {% block content %}
 <br>
@@ -64,7 +65,7 @@
       </div>
       <br>
       <p style="font-size:10pt; font-style: italic;">Dir gefällt dieser Post? Dann teile ihn mit deinen Freunden!</p>
-      <div class="shariff" data-services="[{% for name in SHARE_BUTTONS %}&quot;{{ name }}&quot;{% if loop.index != SHARE_BUTTONS|length %},{% endif %}{% endfor %}]" data-title="{{ article.title }} // {{ SITENAME }}" {% if SHARE_BUTTONS.find == mail %}data-mail-url="mailto:" data-mail-subject="Interessanter Post auf Fabis Blog" data-mail-body="Hey, les dir doch mal den Artikel durch! Müsste dir gefallen ;) {{ SITEURL }}/{{ article.url }}" {% endif %}>
+      <div class="shariff" data-services="[{% for name in SHARE_BUTTONS %}&quot;{{ name }}&quot;{% if loop.index != SHARE_BUTTONS|length %},{% endif %}{% endfor %}]" data-title="{{ article.title }} - {{ SITENAME }}" {% if SHARE_BUTTONS.find == mail %}data-mail-url="mailto:" data-mail-subject="Interessanter Post auf {{ SITENAME }}" data-mail-body="Hey, les dir doch mal den Artikel durch! Müsste dir gefallen ;) {{ SITEURL }}/{{ article.url }}" {% endif %}>
       </div>
       <br>
       {% if article.related_posts %}
