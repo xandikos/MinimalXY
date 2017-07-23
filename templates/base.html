@@ -59,14 +59,13 @@
           {% for p in pages %}
           <li{% if p==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
           {% endfor %}
-          {% else %}
+          {% endif %}
           {% if DISPLAY_CATEGORIES_ON_MENU %}
           {% for cat, null in categories %}
           {% if cat != DEFAULT_CATEGORY %}
           <li class="w3-bottombar w3-border-white w3-hover-border-red" {% if cat == category %}style="font-weight: bold;"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
           {% endif %}
           {% endfor %}
-          {% endif %}
           {% endif %}
           {% for title, link in MENUITEMS %}
           <li class="w3-bottombar w3-border-white w3-hover-border-red"><a href="{{ link }}">{{ title }}</a></li>
