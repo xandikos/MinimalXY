@@ -6,15 +6,15 @@
 {% endfor %}
     <meta property="og:site_name" content="{{ SITENAME }}">
     <meta property="og:title" content="{{ article.title }} - {{ SITENAME }}" />
-    <meta property="og:description" content="{{ article.summary }}" />
+    <meta property="og:description" content="{{ article.title }}" />
     <meta property="og:image" content="{{ SITEURL }}{{ article.headerimage }}">
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
-    <meta property="og:locale" content="de_DE" />
-    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="cs_CZ" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ article.title }} - {{ SITENAME }}">
-    <meta name="twitter:description" content="{{ article.summary }}">
+    <meta name="twitter:description" content="{{ article.title }}">
     <meta name="twitter:image" content="{{ SITEURL }}{{ article.headerimage }}">
 {% endblock %}
 {% block content %}
@@ -24,14 +24,14 @@
     <h1>{{ article.title }}</h1>
     <div class="post-info">
       <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
-        <span>Gepostet am <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time> in <i><a href="{{ SITEURL }}/{{ article.category.url }}" title="Alle Artikel der Kategorie {{ article.category }}">{{ article.category }}</a></i>
+        <span><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time> in <i><a href="{{ SITEURL }}/{{ article.category.url }}" title="All articles in category {{ article.category }}">{{ article.category }}</a></i>
         </span>
       </div>
       {% if article.tags %}
       <div id="article-tags">
         {% for tag in article.tags %}
         <span class="w3-tag w3-light-grey w3-text-red w3-hover-red">
-          <a href="{{ SITEURL }}/{{ tag.url }}" title="Alle Posts zum Thema {{ tag.name.title() }}">#{{ tag }}</a>
+          <a href="{{ SITEURL }}/{{ tag.url }}" title="All articles with {{ tag.name.title() }} tag">#{{ tag }}</a>
         </span>
         {% endfor %}
       </div>
@@ -70,8 +70,8 @@
         </div>
       </div>
       <br>
-      <p style="font-size:10pt; font-style: italic;">Dir gefällt dieser Post? Dann teile ihn mit deinen Freunden!</p>
-      <div class="shariff" data-services="[{% for name in SHARE_BUTTONS %}&quot;{{ name }}&quot;{% if loop.index != SHARE_BUTTONS|length %},{% endif %}{% endfor %}]" data-title="{{ article.title }} - {{ SITENAME }}" {% if SHARE_BUTTONS.find == mail %}data-mail-url="mailto:" data-mail-subject="Interessanter Post auf {{ SITENAME }}" data-mail-body="Hey, les dir doch mal den Artikel durch! Müsste dir gefallen ;) {{ SITEURL }}/{{ article.url }}" {% endif %}>
+      <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it with your friends!</p>
+      <div class="shariff" data-services="[{% for name in SHARE_BUTTONS %}&quot;{{ name }}&quot;{% if loop.index != SHARE_BUTTONS|length %},{% endif %}{% endfor %}]" data-title="{{ article.title }} - {{ SITENAME }}" {% if SHARE_BUTTONS.find == mail %}data-mail-url="mailto:" data-mail-subject="Interesting post at {{ SITENAME }}" data-mail-body="Hey, read this article ;) {{ SITEURL }}/{{ article.url }}" {% endif %} data-lang="en">
       </div>
       <br>
       {% if article.related_posts %}
