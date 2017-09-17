@@ -3,7 +3,7 @@
 {{ super() }}
     <meta property="og:site_name" content="{{ SITENAME }}">
     <meta property="og:title" content="{{ SITETITLE }}" />
-    <meta property="og:description" content="{{ SITEDESCRIPTION }}" />
+    <meta property="og:description" content="{{ SITE_DESCRIPTION }}" />
     <meta property="og:image" itemprop="image" content="  {%- for author, articles in authors|sort %}{% if author==AUTHOR %}{{ SITEURL }}/authors/{{ author.page_name[7:] }}.png{% endif %}{% endfor %}">
     <meta property="og:type" content="website" />
 {% endblock %}
