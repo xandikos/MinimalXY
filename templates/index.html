@@ -48,15 +48,6 @@
 <br>
 <br>
 <br>
-{% if loop.index==1 %}
-{% if TAG_CLOUD %}
-{% if articles_page.object_list|count > 2 %}
-{% include 'tagcloud.html' %}
-{% endif %}
-{% endif %}
-{% else %}
-<!-- Whitespace between Articles -->
-{% endif %}
 {% endfor %}
 {% if articles_page.has_other_pages() %}
 {% include 'pagination.html' %}
