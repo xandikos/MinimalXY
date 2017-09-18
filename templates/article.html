@@ -60,7 +60,16 @@
           <br><br><br>
 
           <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it with your friends!</p>
-          <div class="shariff" data-services="[{% for name in SHARE_BUTTONS %}&quot;{{ name }}&quot;{% if loop.index != SHARE_BUTTONS|length %},{% endif %}{% endfor %}]" data-title="{{ article.title }} - {{ SITENAME }}" {% if SHARE_BUTTONS.find == mail %}data-mail-url="mailto:" data-mail-subject="Interesting post at {{ SITENAME }}" data-mail-body="Hey, read this article ;) {{ SITEURL }}/{{ article.url }}" {% endif %} data-lang="en">
+          <div id="share" class="share">
+            <a href="http://www.facebook.com/sharer.php?u={{ (SITEURL + '/' + article.url)|urlencode }}&amp;t={{ (SITENAME + ': ' + article.title)|urlencode }}" target="_blank" class="w3-btn w3-indigo">
+              <i class="fa fa-facebook"></i> Facebook
+            </a>
+            <a href="http://twitter.com/share?url={{ (SITEURL + '/' + article.url)|urlencode }}&amp;text={{ (SITENAME + ': ' + article.title)|urlencode }}" target="_blank" class="w3-btn w3-blue">
+              <i class="fa fa-twitter"></i> Twitter
+            </a>
+            <a href="https://plus.google.com/share?url={{ (SITEURL + '/' + article.url)|urlencode }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
+              <i class="fa fa-google-plus"></i> Google
+            </a>
           </div>
 
           <br><br><br>

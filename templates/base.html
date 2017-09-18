@@ -56,10 +56,10 @@
 
     <!-- Feed -->
     {% if FEED_ALL_ATOM %}
-    <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Full Atom Feed" />
+    <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Atom Feed" />
     {% endif %}
     {% if FEED_ALL_RSS %}
-    <link rel="alternate" type="application/rss+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" title="{{ SITENAME }} Full RSS Feed" />
+    <link rel="alternate" type="application/rss+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" title="{{ SITENAME }} RSS Feed" />
     {% endif %}
     {% if FEED_ATOM %}
     <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" title="{{ SITENAME }} Atom Feed" />
@@ -79,6 +79,9 @@
     {% if TAG_FEED_RSS and tag %}
     <link rel="alternate" type="application/rss+xml" href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" title="{{ SITENAME }} Tags RSS Feed" />
     {% endif %}
+    {% if DISQUS_SITENAME %}
+    <link rel="alternate" type="application/rss+xml" href="http://{{ DISQUS_SITENAME }}.disqus.com/latest.rss" title="{{ SITENAME }} Comments RSS Feed">
+    {% endif %}
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold|Reenie+Beanie">
@@ -86,15 +89,14 @@
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/jqcloud.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/shariff.min.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments-highlight-github.css">
-    {% if CUSTOM_CSS %}
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ CUSTOM_CSS }}">
+    {% if MINIMALX_CUSTOM_CSS %}
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ MINIMALX_CUSTOM_CSS }}">
     {% endif %}
 
     <!-- Icon -->
-    {% if FAVICON %}
-    <link rel="shortcut icon" type="image/x-icon" href="{{ SITEURL }}/{{ FAVICON }}">
+    {% if MINIMALX_FAVICON %}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ SITEURL }}/{{ MINIMALX_FAVICON }}">
     {% endif %}
 
     <!-- JavaScript -->
@@ -136,7 +138,7 @@
 
     <footer id="contentinfo">
       <div id="copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
-        <span>&copy; {{START_YEAR}}{% if START_YEAR and CURRENT_YEAR %}-{% endif %}{{ CURRENT_YEAR }} {{AUTHOR}} {% if FEED_ALL_ATOM %} | <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a>{% endif %}</span>
+        <span>&copy; {{ MINIMALX_START_YEAR }}{% if MINIMALX_START_YEAR and MINIMALX_CURRENT_YEAR %}-{% endif %}{{ MINIMALX_CURRENT_YEAR }} {{ AUTHOR }} {% if FEED_ALL_ATOM %} | <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a>{% endif %}</span>
       </div>
     </footer>
 
@@ -148,6 +150,5 @@
       {% include "piwik.html" %}
     {% endif %}
 
-    <script src="{{ SITEURL }}/theme/js/shariff.min.js"></script>
   </body>
 </html>
