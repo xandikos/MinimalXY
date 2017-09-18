@@ -14,13 +14,13 @@
       <br>
 
       <div class="col-main w3-container">
-        <main id="article-content">
+        <section id="article-content">
           <ul>
           {%- for tag, articles in tags|sort %}
             <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} ({{ articles|count }})</a></li>
           {% endfor %}
           </ul>
-        </main>
+        </section>
 
         <br><br><br>
         

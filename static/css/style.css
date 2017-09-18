@@ -116,28 +116,28 @@ article {
   padding-top: 0!important;
 }
 
-main {
+#article-content {
   line-height: 1.7;
 }
 
-main > p:first-of-type::first-letter {
+#article-content > p:first-of-type::first-letter {
   font-size: 36pt;
   font-weight: bold;
   font-family: serif;
   line-height: 1;
 }
 
-main a {
+#article-content a {
   color: #f44336;
 }
 
-main blockquote {
+#article-content blockquote {
   border-left:6px solid;
   border-color: black;
   padding-left: 16px;
 }
 
-main div.highlight {
+#article-content div.highlight {
   max-height: 600px;
   font-size: 11pt;
   background-color:#f1f1f1;
@@ -145,19 +145,19 @@ main div.highlight {
   margin: 20px 0px;
 }
 
-main pre {
+#article-content pre {
   margin: 0;
   padding: 12px;
 }
 
 
-main p > img {
+#article-content p > img {
   max-width: 100%;
   display: block;
   margin: 30px auto 20px auto;
 }
 
-main p.content-highlight {
+#article-content p.content-highlight {
   color: #f44336;
   font-size: 18pt;
   text-align: right;
@@ -365,7 +365,7 @@ div#contact ul li {
     font-size: 26pt;
   }
 
-  main p.content-highlight {
+  #article-content p.content-highlight {
     font-size: 24pt;
   }
 
