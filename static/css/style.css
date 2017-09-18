@@ -7,7 +7,7 @@ body {
 }
 
 a {
-      text-decoration: none;
+  text-decoration: none;
 }
 
 a img:hover {
@@ -48,20 +48,19 @@ hr {
 }
 
 ::-moz-selection { /* Code for Firefox */
-    color: white;
-    background: #f6665c;
+  color: white;
+  background: #f6665c;
 }
 
 ::selection {
-    color: white;
-    background: #f6665c;
+  color: white;
+  background: #f6665c;
 }
 
 nav {
   font-size: 14pt;
   text-align: right;
 }
-
 
 nav ul {
   padding: 0;
@@ -73,11 +72,11 @@ nav ul {
 }
 
 nav ul li {
-      text-transform: uppercase;
-      list-style: none;
-      padding-left: 25px;
-      padding-right: 25px;
-      white-space:nowrap;
+  text-transform: uppercase;
+  list-style: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  white-space:nowrap;
 }
 
 img.avatar {
@@ -150,7 +149,6 @@ article {
   padding: 12px;
 }
 
-
 #article-content p > img {
   max-width: 100%;
   display: block;
@@ -180,6 +178,7 @@ article {
 	height: 0;
   margin: 40px 0 10px 0;
 }
+
 .videoWrapper iframe {
 	position: absolute;
 	top: 0;
@@ -214,8 +213,8 @@ div#blogroll ul li {
 }
 
 #blogroll {
-    background-color: #272727;
-    color: white;
+  background-color: #272727;
+  color: white;
 }
 
 #contact {
@@ -257,7 +256,6 @@ div#contact ul li {
 .headerimage-card > img {
   max-width: 100%;
 }
-
 
 #banner {
   display: flex;
@@ -309,7 +307,6 @@ div#contact ul li {
   font-size: 11pt;
 }
 
-
 #introduction {
   display: flex;
   align-items: center;
@@ -353,8 +350,8 @@ div#contact ul li {
 @media screen and (min-width: 530px) {
 
   nav ul {
-      flex-direction: row;
-      margin-top: 24px;
+    flex-direction: row;
+    margin-top: 24px;
   }
 
   article {
