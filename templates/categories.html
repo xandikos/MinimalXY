@@ -21,8 +21,6 @@
           {% endfor %}
           </ul>
 
-          <br>
-
           {% for category, articles in categories %}
           <h3>{{ category }}</h3>
           <ul>
@@ -30,7 +28,6 @@
             <li><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time> <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
           {% endfor %}
           </ul>
-          <br>
           {% endfor %}
 
         </section>

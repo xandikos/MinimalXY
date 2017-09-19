@@ -49,12 +49,12 @@ hr {
 
 ::-moz-selection { /* Code for Firefox */
   color: white;
-  background: #f6665c;
+  background: #81C784;
 }
 
 ::selection {
   color: white;
-  background: #f6665c;
+  background: #81C784;
 }
 
 nav {
@@ -112,36 +112,38 @@ ul.social li a:hover {
 
 article {
   font-size: 13.5pt;
-  padding-top: 0!important;
+  padding-top: 0;
 }
 
 #article-content {
-  line-height: 1.7;
-}
-
-#article-content > p:first-of-type::first-letter {
-  font-size: 36pt;
-  font-weight: bold;
-  font-family: serif;
-  line-height: 1;
+  line-height: 1.6;
 }
 
 #article-content a {
-  color: #f44336;
+  color: #4CAF50;
+}
+
+#article-content a:hover {
+  text-decoration: underline;
+}
+
+#article-content h2, #article-content h3, #article-content h4 {
+  margin-top: 40px;
 }
 
 #article-content blockquote {
   border-left:6px solid;
   border-color: black;
   padding-left: 16px;
+  font-style: italic;
 }
 
 #article-content div.highlight {
   max-height: 600px;
   font-size: 11pt;
   background-color:#f1f1f1;
-  overflow: scroll;
-  margin: 20px 0px;
+  overflow: auto;
+  margin: 40px 0px;
 }
 
 #article-content pre {
@@ -152,16 +154,20 @@ article {
 #article-content p > img {
   max-width: 100%;
   display: block;
-  margin: 30px auto 20px auto;
+  margin: 40px auto 40px auto;
 }
 
 #article-content p.content-highlight {
-  color: #f44336;
+  color: #4CAF50;
   font-size: 18pt;
   text-align: right;
   font-style: italic;
   width: 50%;
   float: right;
+}
+
+#content article {
+  padding: 30px;
 }
 
 .caption {
@@ -284,7 +290,7 @@ div#contact ul li {
 }
 
 #content-title-tag {
-  color: #f44336;
+  color: #4CAF50;
   font-size: 36pt;
 }
 
@@ -321,7 +327,6 @@ div#contact ul li {
 }
 
 #author-block {
-  /*height: auto;*/
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -329,10 +334,10 @@ div#contact ul li {
 
 #author-info {
   display: flex;
-  margin-left: 37px;
+  margin-left: 40px;
+  margin-right: 40px;
   margin-top: 15px;
   margin-bottom: 10px;
-  width: 80%;
 }
 
 #author-name {
@@ -343,6 +348,16 @@ div#contact ul li {
 #author-story {
   font-size: 11pt;
   font-style: italic;
+}
+
+#share a {
+  min-width: 50px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+#share a span {
+  display: none;
 }
 
 
@@ -383,4 +398,7 @@ div#contact ul li {
     height: 280px;
   }
 
+  #share a span {
+    display: inline;
+  }
 }

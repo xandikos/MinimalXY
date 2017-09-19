@@ -16,7 +16,7 @@
           {% if article.tags %}
           <div id="article-tags">
             {% for tag in article.tags %}
-            <span class="w3-tag w3-light-grey w3-text-red w3-hover-red">
+            <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
               <a href="{{ SITEURL }}/{{ tag.url }}" title="All articles with {{ tag.name.title() }} tag">#{{ tag }}</a>
             </span>
             {% endfor %}
@@ -61,13 +61,13 @@
           <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it with your friends!</p>
           <div id="share" class="share">
             <a href="http://www.facebook.com/sharer.php?u={{ (SITEURL + '/' + article.url)|urlencode }}&amp;t={{ (SITENAME + ': ' + article.title)|urlencode }}" target="_blank" class="w3-btn w3-indigo">
-              <i class="fa fa-facebook"></i> Facebook
+              <i class="fa fa-facebook"></i> <span>Facebook</span>
             </a>
             <a href="http://twitter.com/share?url={{ (SITEURL + '/' + article.url)|urlencode }}&amp;text={{ (SITENAME + ': ' + article.title)|urlencode }}" target="_blank" class="w3-btn w3-blue">
-              <i class="fa fa-twitter"></i> Twitter
+              <i class="fa fa-twitter"></i> <span>Twitter</span>
             </a>
             <a href="https://plus.google.com/share?url={{ (SITEURL + '/' + article.url)|urlencode }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
-              <i class="fa fa-google-plus"></i> Google
+              <i class="fa fa-google-plus"></i> <span>Google</span>
             </a>
           </div>
 
