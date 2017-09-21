@@ -64,8 +64,8 @@ SOCIAL = (
 
 # Menu
 MENUITEMS = (
-    ('Categories', CATEGORIES_SAVE_AS),
-    ('Archive', ARCHIVES_SAVE_AS),
+    ('Categories', '/' + CATEGORIES_SAVE_AS),
+    ('Archive', '/' + ARCHIVES_SAVE_AS),
 )
 ```
 
