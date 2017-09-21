@@ -1,38 +1,76 @@
-minimalX. A beautiful and user-centered Pelican theme.
-========================================================
+MinimalXY Pelican Theme
+=======================
 
-[It's time for something new.](http://fabianbloggt.de/minimalx-pelican-theme.html) Here's minimalX, making your Pelican-enabled blog enjoyable again.
+MinimalXY [Pelican](https://getpelican.com/) theme is extended from [minimalX](https://github.com/art1fa/minimalX) by [art1fa](https://github.com/art1fa).
 
-### Design focus
+I made some improvements, polishing and SEO optimization. The main purpose of this fork is to keep everything simple and focus on content. I removed all unnecessary parts. You can see this theme live here: [blog.petrnohejl.cz](http://blog.petrnohejl.cz/).
+
+
+Design focus
+------------
+
 - Minimal flat design
 - Good usability, simple & intuitive navigation
-- Focus on what's really important &ndash; your articles. Presented in a clean and straightforward way
-- Make tags great again!
-- Native integration of media - header images, gallerys, videos
+- Focus on what's really important &ndash; your articles
+- Presented in a clean and straightforward way
 
 
-### Features
+Features
+--------
+
 - Fully responsive and mobile-first
-- Real tagcloud
 - Comments via Disqus integration
-- Privacy-friendly social media buttons
+- Social media buttons
 - W3.CSS CSS framework & HTML5 semantics
 
 
-### Screenshot
-![Screenshot of minimalX](minimalX.png)
+Screenshots
+-----------
 
-Check out [fabianbloggt.de](http://fabianbloggt.de) for a live demonstration of this theme.
+- [Screenshot #1](screenshot1.png)
+- [Screenshot #2](screenshot2.png)
 
-### How to use minimalX
 
-Check the [Wiki](https://github.com/art1fa/minimalX/wiki).
+How to use
+----------
 
-I wrote an [example article](http://fabianbloggt.de/minimalx-article-format.html) to show you how minimalX renders your articles. There are also some additional styling methods explained.
+```python
+# Theme
+THEME = '/path/to/MinimalXY'
 
-### Contributions welcome!
+# Theme customizations
+MINIMALXY_CUSTOM_CSS = 'static/custom.css'
+MINIMALXY_FAVICON = 'favicon.ico'
+MINIMALXY_START_YEAR = 2009
+MINIMALXY_CURRENT_YEAR = date.today().year
 
-This theme is far from perfect, so I'm going to further improve it. If you like this theme, don't hestitate to submit issues and pull requests - I'd love to get in touch with you all ;)
+# Author
+AUTHOR_INTRO = u'Hello world! I’m John Doe.'
+AUTHOR_DESCRIPTION = u'Hello world! I’m John Doe. I like coffee, birds and Python.'
+AUTHOR_AVATAR = 'http://www.gravatar.com/avatar/abcdefghijkl?s=240'
+AUTHOR_WEB = 'http://mypersonalsite.com'
 
-### License
+# Services
+GOOGLE_ANALYTICS = 'UA-12345678-9'
+DISQUS_SITENAME = 'johndoe'
+
+# Social
+SOCIAL = (
+    ('facebook', 'http://www.facebook.com/johndoe'),
+    ('twitter', 'http://twitter.com/johndoe'),
+    ('github', 'https://github.com/johndoe'),
+    ('linkedin', 'http://www.linkedin.com/in/johndoe'),
+)
+
+# Menu
+MENUITEMS = (
+    ('Categories', CATEGORIES_SAVE_AS),
+    ('Archive', ARCHIVES_SAVE_AS),
+)
+```
+
+
+License
+-------
+
 [MIT](LICENSE)
