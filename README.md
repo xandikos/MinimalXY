@@ -68,7 +68,8 @@ MENUITEMS = (
     ('Archive', '/' + ARCHIVES_SAVE_AS),
 )
 ```
-
+Other variables defined as standard in PELICAN
+http://docs.getpelican.com/en/stable/settings.html
 
 License
 -------
