@@ -116,7 +116,7 @@
           <ul>
             {% if DISPLAY_PAGES_ON_MENU %}
             {% for p in pages %}
-            <li{% if p==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green{% if p==page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
             {% endfor %}
             {% endif %}
             {% if DISPLAY_CATEGORIES_ON_MENU %}
