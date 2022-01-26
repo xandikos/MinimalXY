@@ -17,7 +17,7 @@
     <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
     {% endif %}
     {% if CATEGORY_FEED_ATOM and category %}
-    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(slug=category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
     {% endif %}
     {% if CATEGORY_FEED_RSS and category %}
     <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
@@ -52,7 +52,7 @@
   <div class="w3-row w3-card w3-white">
     <header id=banner>
        <!-- AUTHOR INITIALS-->
-      <a href="{{ SITEURL }}" id=logo title="Home">{{ AUTHOR[0] + AUTHOR[AUTHOR.index(" ")+1] }}</a>
+      <a href="{{ SITEURL }}" title="Home">Home</a>
       <nav id="menu">
         <ul>
           {% if DISPLAY_PAGES_ON_MENU %}
@@ -78,74 +78,10 @@
 {% endblock %}
 {% block content %}
 {% endblock %}
-  <footer id="contentinfo">
-    <div id="blogroll" class="w3-row">
-        <div class="blogroll-block w3-col l3 m3 s6">
-            <div>
-                <h6>Categories</h6>
-                <ul>
-                    {% for category, articles in categories %}
-                    <li class=""><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}<a></li>
-                    {% endfor %}
-                    {% for number in range(4 - categories|count) %}
-                    <li class="empty"></li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    <div class="blogroll-block w3-col l3 m3 s6">
-      <div>
-        <h6>Top Tags</h6>
-        <ul>
-          <!-- Print the four most popular tags, sorted automatically with the setting TAG_CLOUD_SORTING = 'size' in pelicanconf.py -->
-          {% for tag in tag_cloud[:4] %}
-          <li class=""><a href="{{ SITEURL }}/{{ tag.0.url }}"> #{{ tag.0 }} ({{ tag.2 }})</a></li>
-          {% endfor %}
-          {% for number in range(4 - tag_cloud[:4]|count) %}
-          <li class="empty"></li>
-          {% endfor %}
-        </ul>
+  <footer id="footer">
+      <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
+        <span>©  Jelmer Vernooij  | Powered by <a href="http://getpelican.com" target="_blank"><u>Pelican</u></a> and <a href="https://github.com/petrnohejl/minimalXY" target="_blank"><u>minimalXY</u></a> | <a href="https://www.xandikos.org/feeds/all.atom.xml">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a></span>
       </div>
-    </div>
-    <div class="blogroll-block w3-col l3 m3 s6">
-      <div>
-          <h6><a href="{{ SITEURL }}/authors.html">Authors</a></h6>
-          <ul>
-              <!-- {% if authors|count > 1 %}
-              <li class=""><a href="{{ SITEURL }}/authors.html">Alle</a></li>
-              {% endif %} -->
-              {% for author, articles in authors %}
-              <li class=""><a href="{{ SITEURL }}/authors.html">{{ author }}</a></li>
-              <!-- <li class=""><a href="{{ SITEURL }}/authors.html#{{ author.page_name[7:] }}">{{ author }}</a></li> -->
-              {% endfor %} {% for number in range(4 - authors|count) %}
-              <li class="empty"></li>
-              {% endfor %}
-          </ul>
-      </div>
-    </div>
-      <div class="blogroll-block w3-col l3 m3 s6">
-          <div>
-              <h6>Social Media</h6>
-              <ul>
-                  {% for name, link in SOCIAL %}
-                  <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><span style="text-transform: capitalize;">{{ name }}</span> <i class="fa fa-{{ name }}"></i></a></li>
-                  {% endfor %}
-                  {% for number in range(4 - SOCIAL|count) %}
-                  <li class="empty"></li>
-                  {% endfor %}
-              </ul>
-          </div>
-      </div>
-    </div>
-    <div id="contact">
-        <ul>
-            <li><a href="{{ SITEURL }}/pages/impressum.html">About | Privacy</a></li>
-        </ul>
-    </div>
-    <div id="copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
-        <span>Made with ❤️ by FK | Powered by <a href="http://getpelican.com" target="_blank"><u>Pelican</u></a> and <a href="https://github.com/art1fa/minimalX" target="_blank"><u>minimalX</u></a>{% if FEED_ALL_RSS %} | <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">RSS <i class="fa fa-rss" aria-hidden="true"></i></a>{% endif %}
-        </span>
-    </div>
   </footer>
 {% if GOOGLE_ANALYTICS %}
  {% include "ga.html" %}
