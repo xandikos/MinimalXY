@@ -2,8 +2,8 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #fcfcfc;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12pt;
+  font-family: 'Verdana', sans-serif;
+  font-size: 15px;
 }
 
 a {
@@ -118,13 +118,6 @@ article {
 
 main {
   line-height: 1.7;
-}
-
-main > p:first-of-type::first-letter {
-  font-size: 36pt;
-  font-weight: bold;
-  font-family: serif;
-  line-height: 1;
 }
 
 main a {
